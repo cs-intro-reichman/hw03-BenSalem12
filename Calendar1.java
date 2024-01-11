@@ -26,17 +26,21 @@ public class Calendar1 {
                if (dayOfMonth == 1) {
                    numSundays = numSundays + 1;
                }
-               System.out.println(dayOfMonth+"/"+month+"/"+year+" Sunday");
-            }else{
-               System.out.println(dayOfMonth+"/"+month+"/"+year);
+			   if (debugDaysCounter < 10){
+					System.out.println(dayOfMonth+"/"+month+"/"+year+" Sunday");
+			   }
+            }else {
+				if (debugDaysCounter < 10) { 
+				System.out.println(dayOfMonth+"/"+month+"/"+year);
+				}
             }			
 	 		advance();
 	 		debugDaysCounter++;
 	 		//// If you want to stop the loop after n days, replace the condition of the
 	 		//// if statement with the condition (debugDaysCounter == n)
-	 		if (debugDaysCounter == 10) { 
+	 		/*if (debugDaysCounter == 10) { 
 	 			break;
-	 		}
+	 		}*/
         }
 	 	System.out.println("During the 20th century, "+numSundays+" Sundays fell on the first day of the month");
 	 }
